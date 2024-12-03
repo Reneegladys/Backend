@@ -1,5 +1,5 @@
 const Event = require('../models/eventModel');
-
+  
 
 const createEvent = async (req, res) => { 
     console.log (req.body)
@@ -14,9 +14,9 @@ const createEvent = async (req, res) => {
       res.status(500).send('Server error');
     }
   };
-  
 
-const getEvents = async (req, res) => {
+
+  const getEvents = async (req, res) => {
     try {
         const events = await Event.find();
         res.status(200).json(events);
