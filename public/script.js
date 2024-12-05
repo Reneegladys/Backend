@@ -1,7 +1,6 @@
 // API base URL
 const API_URL = 'http://localhost:5000/api/events';
 
-
 async function makePostRequest(url, data) {
     return fetch(url, {
         method: 'POST',
@@ -26,8 +25,9 @@ async function makeGetRequest(url) {
     return fetch(url);
 }
 
+
 document.getElementById('createForm').addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevents refreshing page
+    e.preventDefault(); 
 
     const name = document.getElementById('createName').value;
     const location = document.getElementById('createLocation').value;
